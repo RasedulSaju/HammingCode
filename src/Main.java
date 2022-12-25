@@ -25,11 +25,14 @@ public class Main {
         System.out.println("You entered: " + r + ". So, selected hamming is " + l + ", " + m);
 
         // Generate random message
-        for (int i = 0; i < arrSize; i++) {
-            Random randNum = new Random();
-            hamming[i] = randNum.nextInt(2);
-            System.out.print(hamming[i]);
-        }
+
+//        for (int i = 0; i < arrSize; i++) {
+//            Random randNum = new Random();
+//            hamming[i] = randNum.nextInt(2);
+//            System.out.print(hamming[i]);
+//        }
+
+        // Check the position is a power of 2 and generate random message at the data positions
 
 
 //        for (int i = 0; i < arrSize; i++) {
@@ -50,6 +53,18 @@ public class Main {
 //            System.out.print(hamming[i]);
 //        }
 
+
+        for (int i = 0; i < arrSize; i++) {
+            if (Math.pow(2, i) == i) {
+                hamming[i] = 0;
+            }
+            else{
+                Random randNum = new Random();
+                hamming[i] = randNum.nextInt(2);
+            }
+            System.out.println(i + "= " + hamming[i]);
+            //System.out.print(hamming[i]);
+        }
 
     }
 }
