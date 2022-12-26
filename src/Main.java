@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Example: 3 for 7, 4 \n 4 for 15, 11 \n 5 for 31, 26 \n 6 for 63, 57");
-        System.out.println("Enter hamming value, value of r: ");
+        System.out.println("Example: 3 for 7, 4 \n 4 for 15, 11 \n 5 for 31, 26 \n 6 for 63, 57 and so on");
+        System.out.println("Enter hamming, parity value: ");
 
         // Get input for hamming value, r
         Scanner scanner = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class Main {
         int[] hamming = new int[arrSize];
 
 
-        System.out.println("You entered: " + r + ". So, selected hamming is " + l + ", " + m);
+        System.out.println("You entered: " + r + " bit(s) parity. So, selected hamming is " + l + ", " + m);
 
         // Generate random message
 
@@ -62,8 +62,8 @@ public class Main {
                 Random randNum = new Random();
                 hamming[i] = randNum.nextInt(2);
             }
-            System.out.println(i + "= " + hamming[i]);
-            //System.out.print(hamming[i]);
+            //System.out.println(i + "= " + hamming[i]);
+            System.out.print(hamming[i]);
         }
 
     }
